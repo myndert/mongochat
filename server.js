@@ -11,7 +11,7 @@ mongo.connect('mongodb://localhost/mongochat', (err, db) => {
 
 
     //connect to Socket.io
-    client.on('connection', () => {
+    client.on('connection', (socket) => {
         let chat = db.collection('chats');
 
         //send status to client
@@ -20,7 +20,7 @@ mongo.connect('mongodb://localhost/mongochat', (err, db) => {
         };
 
         //get chats from mongo
-        chat.find().limit(100).sort({_id:1}).toArray((err, res) => {
+        chat.find().limit(100).sort({_id: 1}).toArray((err, res) => {
             if (err){
                 throw err;
             }
