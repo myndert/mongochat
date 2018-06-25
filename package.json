@@ -4,12 +4,20 @@
   "description": "Simple chat app using sockets",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mongodb": "^2.2.30",
-    "socket.io": "^2.0.3"
-  }
+    "mongodb": "^2.2.35",
+    "socket.io": "^2.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myndert/mongochat.git"
+  },
+  "bugs": {
+    "url": "https://github.com/myndert/mongochat/issues"
+  },
+  "homepage": "https://github.com/myndert/mongochat#readme"
 }
